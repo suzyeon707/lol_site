@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    {% block title %}{% endblock %}
+    <meta name=”description” content="A site about League of Legends">
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='img/favicon.ico') }}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">-->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+
+<body class="loading">
+
+<div class="main">
+    {% block header_text %}
+        <h1>A Site about League of Legends</h1>
+    {% endblock %}
+
+
+    {% block body_text %}{% endblock %}
+
+
+    {% block footer_text %}
+        <footer class="global-footer">
+            <ul class="text-center list-unstyled">
+                <li>Built by <span><a href="https://github.com/suzyeon707/lol_site">Jessie King</a></span></li>
+            </ul>
+        </footer>
+    </div>
+    {% endblock %}
+
+
+</body>
+
+</html>
